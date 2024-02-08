@@ -36,7 +36,7 @@ class TgLoggerHandler(StreamHandler):
             t0 = time()
             while time() - t0 < self.timeout:
                 try:
-                    self.bot.send_message(user_id, msg, parse_mode="HTML")
+                    self.bot.send_message(user_id, msg[:4095], parse_mode="HTML")
                     break
                 except Exception as ex:
                     logger.exception("Exception while sending %s to %s:", msg, user_id)

@@ -11,7 +11,7 @@ def setup(base_logger: logging.Logger = logging.getLogger(),
           token: str = '',
           users: List[int] = [],
           timeout: int = 10,
-          tg_format: str = '<b>%(name)s:%(levelname)s</b> - <code>%(message)s</code>'):
+          tg_format: str = '%(name)s:%(levelname)s - %(message)s'):
     """
     Setup TgLogger
 
